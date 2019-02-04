@@ -1,0 +1,13 @@
+/build
+/out
+/database
+*.class
+/classes
+*.iml
+/.idea
+/gradle
+/.gradle
+*application.log
+*/application.log
+*/logger/
+/.nb-gradle/

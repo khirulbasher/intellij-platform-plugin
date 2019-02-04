@@ -1,0 +1,53 @@
+<idea-plugin>
+    <id>com.lemon.idea.plugin</id>
+    <name>A Plugin By Lemon</name>
+    <version>1.0</version>
+    <vendor email="lemon.bashar@gmail.com" >Lemon</vendor>
+
+    <change-notes><![CDATA[
+      Initially Released<br>
+      <em>A Plugin by Lemon</em>
+    ]]>
+    </change-notes>
+
+    <description><![CDATA[
+        Not Described Yet
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+
+
+        <group id="Plugin.Text" text="Text" description="A Plugin By Lemon">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+
+            <group id="Plugin.Text.Case" text="Case" description="Text Case Related Actions" popup="true">
+                <action id="com.lemon.idea.plugin.text.impl.CaseSwitch" class="com.lemon.idea.plugin.text.impl.CaseSwitch" text="Switch Upper/Lower Case"
+                        description="Case Switch">
+                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
+                </action>
+                <action id="com.lemon.idea.plugin.text.impl.CamelToSnake" class="com.lemon.idea.plugin.text.impl.CamelToSnake" text="Switch Camel/Snake Case"
+                        description="Camel Snake Switch bi-directional">
+                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
+                </action>
+            </group>
+
+        </group>
+    </actions>
+
+    <application-components>
+        <component>
+            <implementation-class>com.lemon.idea.plugin.PluginMenu</implementation-class>
+        </component>
+    </application-components>
+</idea-plugin>
