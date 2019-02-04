@@ -10,16 +10,4 @@ public class PluginMenu implements ApplicationComponent {
     public String getComponentName() {
         return "Text";
     }
-
-    /*public void initComponent() {
-        ActionManager am = ActionManager.getInstance();
-        Plugin action = new Plugin();
-
-        am.registerAction("uppercase", action);
-
-        DefaultActionGroup windowM = (DefaultActionGroup) am.getAction("WindowMenu");
-
-        windowM.addSeparator();
-        windowM.add(action);
-    }*/
 }

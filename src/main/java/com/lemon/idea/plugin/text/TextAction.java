@@ -2,9 +2,12 @@ package com.lemon.idea.plugin.text;
 
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
+import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.SelectionModel;
+import com.intellij.openapi.project.Project;
 import com.lemon.idea.plugin.AbstractAction;
+import com.lemon.idea.plugin.text.util.TextUtil;
 
 @SuppressWarnings("WeakerAccess")
 public abstract class TextAction extends AbstractAction {
@@ -13,10 +16,9 @@ public abstract class TextAction extends AbstractAction {
 
     protected SelectionModel selectionModel;
     protected Editor editor;
-    protected TextUtil textUtil;
+    protected Project project;
 
     public TextAction() {
-        this.textUtil = new TextUtil();
     }
 
     @Override
@@ -27,9 +29,19 @@ public abstract class TextAction extends AbstractAction {
             this.selectionEnd=selectionModel.getSelectionEnd();
             this.selectedText=selectionModel.getSelectedText();
             this.editor=event.getData(CommonDataKeys.EDITOR);
-            this.everythingOk=this.selectedText!=null && !this.selectedText.isEmpty() && this.editor!=null && this.selectionModel!=null;
+            this.project=event.getProject();
+            this.everythingOk=this.project!=null &&
+                    this.selectedText!=null &&
+                    !this.selectedText.isEmpty() &&
+                    this.editor!=null &&
+                    this.selectionModel!=null;
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    protected void replace(String replacedText) {
+        WriteCommandAction.runWriteCommandAction(project,()->editor.getDocument().replaceString(selectionStart,selectionEnd,replacedText));
+
     }
 }
