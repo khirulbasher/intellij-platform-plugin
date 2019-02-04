@@ -10,7 +10,7 @@ public class CaseSwitch extends TextAction {
     public void actionPerformed(AnActionEvent event) {
         super.actionPerformed(event);
         if(!isEverythingOk()) return;
-        TextUtil.TextStat textStat=TextUtil.textStatus(selectedText);
+        TextUtil.TextStat textStat=textUtil.textStatus(selectedText);
         if(textStat.equals(TextUtil.TextStat.NO_ALPHABET)) return;
         String converted=textStat.equals(TextUtil.TextStat.LOWERCASE)?selectedText.toUpperCase():selectedText.toLowerCase();
         WriteCommandAction.runWriteCommandAction(event.getProject(),()->editor.getDocument().replaceString(selectionStart,selectionEnd,converted));

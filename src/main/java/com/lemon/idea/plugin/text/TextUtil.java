@@ -5,7 +5,7 @@ public class TextUtil {
         NO_ALPHABET,UPPERCASE,LOWERCASE,SNACK_CASE,CAMEL_CASE
     }
 
-    public static TextStat textStatus(String text) {
+    public TextStat textStatus(String text) {
         for(char ch:text.toCharArray()) {
             if(isLower(ch)) return TextStat.LOWERCASE;
             if(isUpper(ch)) return TextStat.UPPERCASE;
@@ -13,17 +13,28 @@ public class TextUtil {
         return TextStat.NO_ALPHABET;
     }
 
-    public static TextStat camelOrSnack(String text) {
+    public TextStat isCamelOrSnack(String text) {
         for(char ch:text.toCharArray()) {
             if(ch=='_') return TextStat.SNACK_CASE;
         }
         return TextStat.CAMEL_CASE;
     }
 
-    public static boolean isUpper(char ch) {
+    public boolean isUpper(char ch) {
         return ch>='A' && ch<='Z';
     }
-    public static boolean isLower(char ch) {
+
+    public boolean isLower(char ch) {
         return ch>='a' && ch<='z';
+    }
+
+    public char toUpper(char ch) {
+        if(ch>='a' && ch<='z') return (char)('A'+(ch-'a'));
+        return ch;
+    }
+
+    public char toLower(char ch) {
+        if(ch>='A' && ch<='Z') return (char)('a'+(ch-'A'));
+        return ch;
     }
 }

@@ -13,6 +13,11 @@ public abstract class TextAction extends AbstractAction {
 
     protected SelectionModel selectionModel;
     protected Editor editor;
+    protected TextUtil textUtil;
+
+    public TextAction() {
+        this.textUtil = new TextUtil();
+    }
 
     @Override
     public void actionPerformed(AnActionEvent event) {

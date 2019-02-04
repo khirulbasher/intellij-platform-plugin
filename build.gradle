@@ -23,6 +23,6 @@ intellij {
 
 patchPluginXml {
     changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+      No Change Notes Available.<br>
+      <em>The First Release</em>"""
 }

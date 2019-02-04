@@ -10,12 +10,12 @@ public class CamelToSnake extends TextAction {
     public void actionPerformed(AnActionEvent event) {
         super.actionPerformed(event);
         if(!isEverythingOk()) return;
-        TextUtil.TextStat textStat=TextUtil.camelOrSnack(selectedText);
+        TextUtil.TextStat textStat=textUtil.isCamelOrSnack(selectedText);
         String converted=textStat.equals(TextUtil.TextStat.CAMEL_CASE)?toSnackCase(selectedText):toCamelCase(selectedText);
         WriteCommandAction.runWriteCommandAction(event.getProject(),()->editor.getDocument().replaceString(selectionStart,selectionEnd,converted));
     }
 
-    private String toCamelCase(String text) {
+    protected String toCamelCase(String text) {
         return text.replace("_","");
         /*char[] chars=text.toCharArray();
         int len=chars.length;
@@ -29,15 +29,15 @@ public class CamelToSnake extends TextAction {
         return builder.toString();*/
     }
 
-    private String toSnackCase(String text) {
+    protected String toSnackCase(String text) {
         char[] chars=text.toCharArray();
         int len=chars.length;
         StringBuilder builder=new StringBuilder().append(chars[0]);
         for(int i=1;i<len;i++) {
-            if(TextUtil.isUpper(chars[i])) {
-                if(!TextUtil.isUpper(chars[i-1])) builder.append("_").append(chars[i]);
+            if(textUtil.isUpper(chars[i])) {
+                if(!textUtil.isUpper(chars[i-1])) builder.append("_").append(chars[i]);
                 i++;
-                while (i < len && TextUtil.isUpper(chars[i]))
+                while (i < len && textUtil.isUpper(chars[i]))
                     builder.append(chars[i++]);
                 i--;
             }

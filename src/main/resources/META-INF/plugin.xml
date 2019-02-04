@@ -40,6 +40,14 @@
                         description="Camel Snake Switch bi-directional">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
                 </action>
+                <action id="com.lemon.idea.plugin.text.impl.UpperCamelToSnake" class="com.lemon.idea.plugin.text.impl.UpperCamelToSnake" text="Switch Camel/Snake With Upper Case"
+                        description="Camel Snake Switch With Upper Case bi-directional">
+                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
+                </action>
+                <action id="com.lemon.idea.plugin.text.impl.LowerCamelToSnake" class="com.lemon.idea.plugin.text.impl.LowerCamelToSnake" text="Switch Camel/Snake With Lower Case"
+                        description="Camel Snake Switch With Lower Case bi-directional">
+                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
+                </action>
             </group>
 
         </group>
