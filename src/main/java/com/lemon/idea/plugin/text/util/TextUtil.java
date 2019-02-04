@@ -54,4 +54,13 @@ public class TextUtil {
                 if(textCh==providedCh) return true;
         return false;
     }
+
+    public static int omitChar(char[] text,int from,char ch) {
+        return omitChar(text,text.length,from,ch);
+    }
+
+    private static int omitChar(char[] text, int length, int from, char ch) {
+        while (from<length && text[from++]==ch);
+        return from-1;
+    }
 }

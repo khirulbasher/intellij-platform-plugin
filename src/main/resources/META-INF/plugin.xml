@@ -31,7 +31,7 @@
         <group id="Plugin.Text" text="Text" description="A Plugin By Lemon">
             <add-to-group group-id="MainMenu" anchor="last"/>
 
-            <group id="Plugin.Text.Case" text="Case" description="Text Case Related Actions" popup="true">
+            <group id="Plugin.Text.Case" text="Text Case Processing" description="Text Case Related Actions" popup="true">
                 <action id="com.lemon.idea.plugin.text.impl.CaseSwitch" class="com.lemon.idea.plugin.text.impl.CaseSwitch" text="Switch Upper/Lower Case"
                         description="Case Switch">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
@@ -40,12 +40,20 @@
                         description="Camel Snake Switch bi-directional">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
                 </action>
-                <action id="com.lemon.idea.plugin.text.impl.UpperCamelToSnake" class="com.lemon.idea.plugin.text.impl.UpperCamelToSnake" text="Switch Camel/Snake With Upper Case"
-                        description="Camel Snake Switch With Upper Case bi-directional">
+                <action id="com.lemon.idea.plugin.text.impl.ToUpperSnake" class="com.lemon.idea.plugin.text.impl.ToUpperSnake" text="Camel To Upper Snake"
+                        description="Camel Case To Upper Snake Case Convert">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
                 </action>
-                <action id="com.lemon.idea.plugin.text.impl.LowerCamelToSnake" class="com.lemon.idea.plugin.text.impl.LowerCamelToSnake" text="Switch Camel/Snake With Lower Case"
-                        description="Camel Snake Switch With Lower Case bi-directional">
+                <action id="com.lemon.idea.plugin.text.impl.SnakeToUpperCamel" class="com.lemon.idea.plugin.text.impl.SnakeToUpperCamel" text="Snake To Upper Camel"
+                        description="Snake Case To Upper Camel Case Convert">
+                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
+                </action>
+                <action id="com.lemon.idea.plugin.text.impl.ToLowerSnake" class="com.lemon.idea.plugin.text.impl.ToLowerSnake" text="Camel To Lower Snake"
+                        description="Camel Case To Lower Snake Case">
+                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
+                </action>
+                <action id="com.lemon.idea.plugin.text.impl.SnakeToLowerCamel" class="com.lemon.idea.plugin.text.impl.SnakeToLowerCamel" text="Snake To Lower Camel"
+                        description="Snake Case To Lower Camel Case">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
                 </action>
             </group>
