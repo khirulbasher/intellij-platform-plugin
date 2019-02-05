@@ -68,7 +68,7 @@ public abstract class TextAction extends AbstractAction {
     protected String toSnackCase(String text) {
         char[] chars=text.toCharArray();
         int len=chars.length;
-        StringBuilder builder=new StringBuilder().append(chars[0]);
+        StringBuilder builder=new StringBuilder().append(toUpper(chars[0]));
         for(int i=1;i<len;i++) {
             if(isUpper(chars[i])) {
                 if(!isUpper(chars[i-1])) builder.append("_").append(chars[i]);
