@@ -1,6 +1,7 @@
-package com.lemon.idea.plugin.processing.text;
+package com.lemon.framework.textprocessing.text;
 
-import com.lemon.idea.plugin.processing.Processor;
+
+import com.lemon.framework.textprocessing.Processor;
 
 public abstract class AbstractTextProcessor  implements Processor<String,String> {
 
@@ -9,5 +10,5 @@ public abstract class AbstractTextProcessor  implements Processor<String,String>
         return doProcess(input);
     }
 
-    protected abstract String doProcess(String input);
+    protected abstract String doProcess(String text);
 }

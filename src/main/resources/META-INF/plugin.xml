@@ -32,7 +32,25 @@
             <add-to-group group-id="MainMenu" anchor="last"/>
 
             <group id="Plugin.Text.Case" text="Text Case Processing" description="Text Case Related Actions" popup="true">
-                <action id="com.lemon.idea.plugin.text.impl.CaseSwitch" class="com.lemon.idea.plugin.text.impl.CaseSwitch" text="Switch Upper/Lower Case"
+                <action id="com.lemon.idea.plugin.text.impl.ToUpperSnakeCase" class="com.lemon.idea.plugin.text.impl.ToUpperSnakeCase" text="To Upper Snake Case"
+                        description="To Upper Snake Case Convert">
+                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
+                </action>
+                <action id="com.lemon.idea.plugin.text.impl.ToLowerSnakeCase" class="com.lemon.idea.plugin.text.impl.ToLowerSnakeCase" text="To Lower Snake Case"
+                        description="To Lower Snake Case">
+                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
+                </action>
+
+                <action id="com.lemon.idea.plugin.text.impl.ToUpperFlatSnakeCase" class="com.lemon.idea.plugin.text.impl.ToUpperFlatSnakeCase" text="To Upper Flat Snake Case"
+                        description="To Upper Snake Case Convert">
+                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
+                </action>
+                <action id="com.lemon.idea.plugin.text.impl.ToLowerFlatSnakeCase" class="com.lemon.idea.plugin.text.impl.ToLowerFlatSnakeCase" text="To Lower Flat Snake Case"
+                        description="To Lower Snake Case">
+                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
+                </action>
+
+                <!--<action id="com.lemon.idea.plugin.text.impl.CaseSwitch" class="com.lemon.idea.plugin.text.impl.CaseSwitch" text="Switch Upper/Lower Case"
                         description="Case Switch">
                     <keyboard-shortcut keymap="$IdeaPlugin" first-keystroke="alt C" second-keystroke="alt S" remove="true"/>
                 </action>
@@ -55,7 +73,7 @@
                 <action id="com.lemon.idea.plugin.text.impl.SnakeToLowerCamel" class="com.lemon.idea.plugin.text.impl.SnakeToLowerCamel" text="To Lower Camel"
                         description="Snake Case To Lower Camel Case">
                     <keyboard-shortcut keymap="IdeaPlugin" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
-                </action>
+                </action>-->
             </group>
 
         </group>

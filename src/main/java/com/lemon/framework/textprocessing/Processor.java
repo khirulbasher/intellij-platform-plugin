@@ -1,4 +1,4 @@
-package com.lemon.idea.plugin.processing;
+package com.lemon.framework.textprocessing;
 
 /**
  * A Processor for Operational Purpose

@@ -1,4 +1,6 @@
-package com.lemon.idea.plugin.text.util;
+package com.lemon.framework.textprocessing.text.util;
+
+import java.util.function.Function;
 
 public class TextUtil {
     public static boolean isUpper(char ch) {
@@ -7,6 +9,24 @@ public class TextUtil {
 
     public static boolean isLower(char ch) {
         return ch>='a' && ch<='z';
+    }
+
+    public static boolean isAlphabet(char ch) {
+        return (ch>='a' && ch<='z') || (ch>='A' && ch<='Z');
+    }
+
+    public static boolean isNumber(char ch) {
+        return ch>='0' && ch<='9';
+    }
+
+    /**
+     * Detect That is the both character is upper case or lower-case
+     * @param ch1 first char
+     * @param ch2 second char
+     * @return true if they both are alphabet and both also upper or lower case
+     */
+    public static boolean isBothSameCase(char ch1,char ch2) {
+        return (isAlphabet(ch1) && isAlphabet(ch2)) && (isLower(ch1) ? isLower(ch2) : isUpper(ch2));
     }
 
     public static char toUpper(char ch) {
@@ -59,8 +79,17 @@ public class TextUtil {
         return omitChar(text,text.length,from,ch);
     }
 
-    private static int omitChar(char[] text, int length, int from, char ch) {
+    public static int omitChar(char[] text, int length, int from, char ch) {
         while (from<length && text[from++]==ch);
-        return from-1;
+        return from==length?length:from-1;
+    }
+
+    public static int omitChar(char[] text,int from,Function<Character,Boolean> omitChecker) {
+        return omitChar(text,text.length,from,omitChecker);
+    }
+
+    public static int omitChar(char[] text, int length, int from, Function<Character,Boolean> omitChecker) {
+        while (from<length && omitChecker.apply(text[from++]));
+        return from==length?length:from-1;
     }
 }
