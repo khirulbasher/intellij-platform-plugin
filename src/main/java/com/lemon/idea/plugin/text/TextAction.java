@@ -19,6 +19,10 @@ public abstract class TextAction extends AbstractAction {
     protected Project project;
     protected Processor<String,String> processor;
 
+    protected TextAction() {
+    }
+
+
     public TextAction(Processor<String, String> processor) {
         this.processor = processor;
     }
@@ -37,11 +41,14 @@ public abstract class TextAction extends AbstractAction {
                     !this.selectedText.isEmpty() &&
                     this.editor!=null &&
                     this.selectionModel!=null;
-            if(this.isEverythingOk())
-                replace(processor.process(selectedText));
+            replace(process(selectedText));
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    protected String process(String selectedText) {
+        return processor.process(selectedText);
     }
 
     protected void replace(String replacedText) {

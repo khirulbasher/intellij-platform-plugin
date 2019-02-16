@@ -32,6 +32,37 @@
             <add-to-group group-id="MainMenu" anchor="last"/>
 
             <group id="Plugin.Text.Case" text="Text Case Processing" description="Text Case Related Actions" popup="true">
+                <!--Text Case Switch-->
+                <action id="com.lemon.idea.plugin.text.impl.CaseSwitchProcessor" class="com.lemon.idea.plugin.text.impl.CaseSwitchProcessor" text="To Upper/Lower Case"
+                        description="To Upper/Lower Case Convert">
+                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
+                </action>
+                <action id="com.lemon.idea.plugin.text.impl.ToUpperCase" class="com.lemon.idea.plugin.text.impl.ToUpperCase" text="To Upper Case"
+                        description="To Upper Case Convert">
+                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
+                </action>
+                <action id="com.lemon.idea.plugin.text.impl.ToLowerCase" class="com.lemon.idea.plugin.text.impl.ToLowerCase" text="To Lower Case"
+                        description="To Lower Case">
+                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
+                </action>
+                <!--Text Case Switch-->
+
+                <!--Text Type Switch-->
+
+                <action id="com.lemon.idea.plugin.text.impl.CaseTypeSwitchCase" class="com.lemon.idea.plugin.text.impl.CaseTypeSwitchCase" text="To Snake/Camel Case"
+                        description="To Snake/Camel Case">
+                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
+                </action>
+                <action id="com.lemon.idea.plugin.text.impl.ToUpperCamelCase" class="com.lemon.idea.plugin.text.impl.ToUpperCamelCase" text="To Upper Camel Case"
+                        description="To Upper Camel Case">
+                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
+                </action>
+                <action id="com.lemon.idea.plugin.text.impl.ToLowerCamelCase" class="com.lemon.idea.plugin.text.impl.ToLowerCamelCase" text="To Lower Camel Case"
+                        description="To Lower Camel Case">
+                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
+                </action>
+
+
                 <action id="com.lemon.idea.plugin.text.impl.ToUpperSnakeCase" class="com.lemon.idea.plugin.text.impl.ToUpperSnakeCase" text="To Upper Snake Case"
                         description="To Upper Snake Case Convert">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
@@ -42,38 +73,15 @@
                 </action>
 
                 <action id="com.lemon.idea.plugin.text.impl.ToUpperFlatSnakeCase" class="com.lemon.idea.plugin.text.impl.ToUpperFlatSnakeCase" text="To Upper Flat Snake Case"
-                        description="To Upper Snake Case Convert">
+                        description="To Upper Flat Snake Case Convert">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
                 </action>
                 <action id="com.lemon.idea.plugin.text.impl.ToLowerFlatSnakeCase" class="com.lemon.idea.plugin.text.impl.ToLowerFlatSnakeCase" text="To Lower Flat Snake Case"
-                        description="To Lower Snake Case">
+                        description="To Lower Flat Snake Case">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
                 </action>
 
-                <!--<action id="com.lemon.idea.plugin.text.impl.CaseSwitch" class="com.lemon.idea.plugin.text.impl.CaseSwitch" text="Switch Upper/Lower Case"
-                        description="Case Switch">
-                    <keyboard-shortcut keymap="$IdeaPlugin" first-keystroke="alt C" second-keystroke="alt S" remove="true"/>
-                </action>
-                <action id="com.lemon.idea.plugin.text.impl.CamelToSnake" class="com.lemon.idea.plugin.text.impl.CamelToSnake" text="Switch Camel/Snake Case"
-                        description="Camel Snake Switch bi-directional">
-                    <keyboard-shortcut keymap="$IdeaPlugin" first-keystroke="alt T" second-keystroke="alt S" remove="true"/>
-                </action>
-                <action id="com.lemon.idea.plugin.text.impl.ToUpperSnake" class="com.lemon.idea.plugin.text.impl.ToUpperSnake" text="To Upper Snake"
-                        description="Camel Case To Upper Snake Case Convert">
-                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
-                </action>
-                <action id="com.lemon.idea.plugin.text.impl.SnakeToUpperCamel" class="com.lemon.idea.plugin.text.impl.SnakeToUpperCamel" text="To Upper Camel"
-                        description="Snake Case To Upper Camel Case Convert">
-                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
-                </action>
-                <action id="com.lemon.idea.plugin.text.impl.ToLowerSnake" class="com.lemon.idea.plugin.text.impl.ToLowerSnake" text="To Lower Snake"
-                        description="Camel Case To Lower Snake Case">
-                    <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
-                </action>
-                <action id="com.lemon.idea.plugin.text.impl.SnakeToLowerCamel" class="com.lemon.idea.plugin.text.impl.SnakeToLowerCamel" text="To Lower Camel"
-                        description="Snake Case To Lower Camel Case">
-                    <keyboard-shortcut keymap="IdeaPlugin" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
-                </action>-->
+                <!--Text Type Switch-->
             </group>
 
         </group>
