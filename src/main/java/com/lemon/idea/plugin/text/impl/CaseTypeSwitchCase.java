@@ -22,7 +22,7 @@ public class CaseTypeSwitchCase extends TextAction {
     protected String process(String selectedText) {
         Character firstChar=TextUtil.findFirstAlphabet(selectedText);
         if(firstChar==null || TextUtil.isUpper(firstChar)) {
-            if (TextUtil.hasAnyCharAnywhere(selectedText, '_'))
+            if (TextUtil.hasAnyCharAnywhere(selectedText, '_','-'))
                 return toUpperCamelCase.process(selectedText);
             return toUpperSnakeCase.process(selectedText);
         }
