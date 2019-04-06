@@ -23,6 +23,6 @@ intellij {
 
 patchPluginXml {
     changeNotes """
-      No Change Notes Available.<br>
-      <em>The First Release</em>"""
+      A Text Processing Plugin.<br>
+      <em>First Release</em>"""
 }

@@ -1,12 +1,12 @@
 <idea-plugin>
     <id>com.lemon.idea.plugin</id>
-    <name>A Plugin By Lemon</name>
+    <name>A Plugin For Text Processing.</name>
     <version>1.0</version>
     <vendor email="lemon.bashar@gmail.com" >Lemon</vendor>
 
     <change-notes><![CDATA[
       Initially Released<br>
-      <em>A Plugin by Lemon</em>
+      <em>A Plugin For Text Processing.</em>
     ]]>
     </change-notes>
 
