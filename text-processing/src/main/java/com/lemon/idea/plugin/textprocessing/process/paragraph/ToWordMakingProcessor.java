@@ -1,4 +1,4 @@
-package com.lemon.idea.plugin.textprocessing.process.textcase;
+package com.lemon.idea.plugin.textprocessing.process.paragraph;
 
 import com.lemon.idea.plugin.textprocessing.TextAction;
 

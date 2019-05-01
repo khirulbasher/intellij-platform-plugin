@@ -38,7 +38,23 @@
             </group>
 
             <group id="Plugin.Text.Process" description="Text Process" text="Text Process" popup="true">
-                <action class="com.lemon.idea.plugin.textprocessing.process.textcase.ToWordMakingProcessor" id="com.lemon.idea.plugin.textprocessing.process.textcase.ToWordMakingProcessor" text="Convert To Words" description="Convert To Words">
+                <action class="com.lemon.idea.plugin.textprocessing.process.paragraph.ToWordMakingProcessor" id="com.lemon.idea.plugin.textprocessing.process.paragraph.ToWordMakingProcessor" text="Convert To Words" description="Convert To Words">
+                    <keyboard-shortcut first-keystroke="ctrl alt w" keymap="Lemon-Keymap" second-keystroke="c" remove="true"/>
+                </action>
+
+                <action class="com.lemon.idea.plugin.textprocessing.process.paragraph.ToSortParagraphProcessor" id="com.lemon.idea.plugin.textprocessing.process.paragraph.ToSortParagraphProcessor" text="Sorting The Paragraph" description="Sorting The Paragraph">
+                    <keyboard-shortcut first-keystroke="ctrl alt w" keymap="Lemon-Keymap" second-keystroke="c" remove="true"/>
+                </action>
+
+                <action class="com.lemon.idea.plugin.textprocessing.process.paragraph.HorizontalSortProcessor" id="com.lemon.idea.plugin.textprocessing.process.paragraph.HorizontalSortProcessor" text="Sorting The Paragraph Horizontally" description="Sorting The Paragraph Horizontally">
+                    <keyboard-shortcut first-keystroke="ctrl alt w" keymap="Lemon-Keymap" second-keystroke="c" remove="true"/>
+                </action>
+
+                <action class="com.lemon.idea.plugin.textprocessing.process.paragraph.VerticalSortProcessor" id="com.lemon.idea.plugin.textprocessing.process.paragraph.VerticalSortProcessor" text="Sorting The Paragraph Vertically" description="Sorting The Paragraph Vertically">
+                    <keyboard-shortcut first-keystroke="ctrl alt w" keymap="Lemon-Keymap" second-keystroke="c" remove="true"/>
+                </action>
+
+                <action class="com.lemon.idea.plugin.textprocessing.process.paragraph.TrimParagraphProcessor" id="com.lemon.idea.plugin.textprocessing.process.paragraph.TrimParagraphProcessor" text="Trim The Paragraph" description="Trim The Paragraph">
                     <keyboard-shortcut first-keystroke="ctrl alt w" keymap="Lemon-Keymap" second-keystroke="c" remove="true"/>
                 </action>
             </group>

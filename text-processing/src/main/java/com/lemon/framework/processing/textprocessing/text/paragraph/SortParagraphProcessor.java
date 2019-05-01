@@ -56,14 +56,14 @@ public class SortParagraphProcessor extends AbstractParagraphProcessor {
         for (String line : lines) {
             StringBuilder builder = new StringBuilder();
             String[] words = line.split(wordSeparatingRegex);
-            sortArray(words, sortOrder);
+            if(sortType.equals(SortType.BOTH) || sortType.equals(SortType.HORIZONTAL)) sortArray(words, sortOrder);
             for (String word : words)
                 builder.append(word).append(wordSeparatingRegex);
             builder.append(lineSeparatingRegex);
             sortedLines.add(builder.toString());
         }
 
-        sortList(sortedLines, sortOrder);
+        if(sortType.equals(SortType.BOTH) || sortType.equals(SortType.VERTICAL)) sortList(sortedLines, sortOrder);
         StringBuilder builder = new StringBuilder();
         sortedLines.forEach(line -> builder.append(line));
         return builder.toString();
