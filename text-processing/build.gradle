@@ -1,0 +1,5 @@
+patchPluginXml {
+    changeNotes """
+      A Text Processing Plugin and Text insertion.<br>
+      <em>First Release</em>"""
+}

@@ -1,4 +1,4 @@
-package com.lemon.idea.plugin.text;
+package com.lemon.idea.plugin.textprocessing;
 
 import com.intellij.openapi.editor.Caret;
 import com.lemon.framework.base.processor.Processor;

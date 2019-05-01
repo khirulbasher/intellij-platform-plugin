@@ -34,8 +34,8 @@ public abstract class AbstractAction extends AnAction {
 
     /**
      * Process The Text using process or any other way
-     * @param selectedText text to process
-     * @return processed text
+     * @param selectedText textprocessing to process
+     * @return processed textprocessing
      */
     protected abstract String process(String selectedText);
 

@@ -40,10 +40,6 @@ subprojects {
 
     patchPluginXml {
         sinceBuild '182'
-        untilBuild '192'
-
-        changeNotes """
-      A Text Processing Plugin and Text insertion.<br>
-      <em>First Release</em>"""
+        untilBuild '192' 
     }
 }

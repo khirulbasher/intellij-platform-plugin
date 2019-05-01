@@ -79,7 +79,7 @@ public class TextUtil {
     /**
      * Skip flow of character if the character is omitable by developer defined and return the after omit cursor point
      *
-     * @param text The main text
+     * @param text The main textprocessing
      * @param from The Starting point from where it starts the omit check
      * @param ch   the character which would be omit
      * @return the after omit index
@@ -91,8 +91,8 @@ public class TextUtil {
     /**
      * Skip flow of character if the character is omitable by developer defined and return the after omit cursor point
      *
-     * @param text   The main text
-     * @param length The text length
+     * @param text   The main textprocessing
+     * @param length The textprocessing length
      * @param from   The Starting point from where it starts the omit check
      * @param ch     the character which would be omit
      * @return the after omit index
@@ -105,7 +105,7 @@ public class TextUtil {
     /**
      * Skip flow of character if the character is omitable by developer defined and return the after omit cursor point
      *
-     * @param text        The main text
+     * @param text        The main textprocessing
      * @param from        The Starting point from where it starts the omit check
      * @param omitChecker The omit checker function
      * @return the after omit index
@@ -117,8 +117,8 @@ public class TextUtil {
     /**
      * Skip flow of character if the character is omitable by developer defined and return the after omit cursor point
      *
-     * @param text        The main text
-     * @param length      The text length
+     * @param text        The main textprocessing
+     * @param length      The textprocessing length
      * @param from        The Starting point from where it starts the omit check
      * @param omitChecker The omit checker function
      * @return the after omit index

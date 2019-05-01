@@ -5,7 +5,7 @@ import java.util.function.Function;
 
 /**
  * It's Working procedure is great.
- * When it try to make a text to camel case i.e Upper Camel Case,
+ * When it try to make a textprocessing to camel case i.e Upper Camel Case,
  * it at first omitted it's omitable characters, and if found any leading character's like continuous upper-case
  * or continuous lower case then it make the first char to upper and leftover to lower
  */
