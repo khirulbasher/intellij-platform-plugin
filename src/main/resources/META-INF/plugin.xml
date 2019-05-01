@@ -84,7 +84,6 @@
                 <action class="com.lemon.idea.plugin.text.impl.ToWordMaking" id="com.lemon.idea.plugin.text.impl.ToWordMaking" text="Convert To Words" description="Convert To Words">
                     <keyboard-shortcut first-keystroke="ctrl alt w" keymap="$default" second-keystroke="c" remove="true"/>
                 </action>
-
                 <!--Text Type Switch-->
             </group>
 

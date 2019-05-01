@@ -19,9 +19,14 @@ dependencies {
 
 intellij {
     version '2018.2.6'
+    plugins 'git4idea', 'junit'
 }
 
+
 patchPluginXml {
+    sinceBuild '182'
+    untilBuild '192'
+
     changeNotes """
       A Text Processing Plugin.<br>
       <em>First Release</em>"""
