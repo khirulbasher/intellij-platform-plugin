@@ -4,6 +4,8 @@ import com.intellij.openapi.editor.Caret;
 import com.lemon.framework.base.processor.Processor;
 import com.lemon.idea.plugin.AbstractAction;
 
+import java.util.List;
+
 @SuppressWarnings("WeakerAccess")
 public abstract class TextAction extends AbstractAction {
     protected Processor<String,String> processor;
@@ -17,7 +19,10 @@ public abstract class TextAction extends AbstractAction {
         this.processor = processor;
     }
 
-    @Override
+    public void process(List<Caret> carets) {
+        carets.forEach(this::process);
+    }
+
     protected void process(Caret caret) {
         if(caret.hasSelection()) {
             String text=caret.getSelectedText();

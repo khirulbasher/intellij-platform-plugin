@@ -1,4 +1,4 @@
-package com.lemon.idea.plugin.textprocessing.process;
+package com.lemon.idea.plugin.textprocessing.process.textcase;
 
 import com.lemon.framework.processing.textprocessing.text.textcase.ToFlatSnakeCaseProcessor;
 import com.lemon.idea.plugin.textprocessing.TextAction;

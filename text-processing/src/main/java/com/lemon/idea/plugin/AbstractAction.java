@@ -26,11 +26,7 @@ public abstract class AbstractAction extends AnAction {
         process(caretModel.getAllCarets());
     }
 
-    public void process(List<Caret> carets) {
-        carets.forEach(this::process);
-    }
-
-    protected abstract void process(Caret caret);
+    public abstract void process(List<Caret> carets);
 
     /**
      * Process The Text using process or any other way
