@@ -1,6 +1,6 @@
 package com.lemon.idea.plugin.text.impl;
 
-import com.lemon.framework.textprocessing.text.impl.ToWordMakingProcessor;
+import com.lemon.framework.processing.textprocessing.text.textcase.ToWordMakingProcessor;
 import com.lemon.idea.plugin.text.TextAction;
 
 public class ToWordMaking extends TextAction {

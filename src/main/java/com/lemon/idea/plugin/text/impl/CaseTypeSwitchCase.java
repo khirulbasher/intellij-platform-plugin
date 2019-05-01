@@ -1,8 +1,11 @@
 package com.lemon.idea.plugin.text.impl;
 
-import com.lemon.framework.textprocessing.Processor;
-import com.lemon.framework.textprocessing.text.impl.*;
-import com.lemon.framework.textprocessing.text.util.TextUtil;
+import com.lemon.framework.base.processor.Processor;
+import com.lemon.framework.processing.textprocessing.text.textcase.ToLowerCamelCaseProcessor;
+import com.lemon.framework.processing.textprocessing.text.textcase.ToLowerSnakeCaseProcessor;
+import com.lemon.framework.processing.textprocessing.text.textcase.ToUpperCamelCaseProcessor;
+import com.lemon.framework.processing.textprocessing.text.textcase.ToUpperSnakeCaseProcessor;
+import com.lemon.framework.processing.textprocessing.util.TextUtil;
 import com.lemon.idea.plugin.text.TextAction;
 
 public class CaseTypeSwitchCase extends TextAction {
@@ -20,7 +23,7 @@ public class CaseTypeSwitchCase extends TextAction {
 
     @Override
     protected String process(String selectedText) {
-        Character firstChar=TextUtil.findFirstAlphabet(selectedText);
+        Character firstChar= TextUtil.findFirstAlphabet(selectedText);
         if(firstChar==null || TextUtil.isUpper(firstChar)) {
             if (TextUtil.hasAnyCharAnywhere(selectedText, '_','-'))
                 return toUpperCamelCase.process(selectedText);

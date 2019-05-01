@@ -1,8 +1,7 @@
 package com.lemon.idea.plugin.text;
 
-import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.editor.Caret;
-import com.lemon.framework.textprocessing.Processor;
+import com.lemon.framework.base.processor.Processor;
 import com.lemon.idea.plugin.AbstractAction;
 
 @SuppressWarnings("WeakerAccess")
@@ -27,17 +26,8 @@ public abstract class TextAction extends AbstractAction {
         }
     }
 
-    /**
-     * Process The Text using processor or any other way
-     * @param selectedText text to process
-     * @return processed text
-     */
+    @Override
     protected String process(String selectedText) {
         return processor.process(selectedText);
     }
-
-    protected void replace(String replacedText,int selectionStart,int selectionEnd) {
-        WriteCommandAction.runWriteCommandAction(project,()->editor.getDocument().replaceString(selectionStart,selectionEnd,replacedText));
-    }
-
 }
