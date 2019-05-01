@@ -1,10 +1,8 @@
-package com.lemon.framework.textprocessing.text.impl;
+package com.lemon.framework.processing.textprocessing.text.impl;
 
-import com.lemon.framework.textprocessing.text.TextProcessorTest;
+import com.lemon.framework.processing.textprocessing.text.TextProcessorTest;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class ToLowerCamelCaseProcessorTest {
     private TextProcessorTest textProcessorTest;

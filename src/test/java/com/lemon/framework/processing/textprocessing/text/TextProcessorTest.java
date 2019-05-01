@@ -1,6 +1,6 @@
-package com.lemon.framework.textprocessing.text;
+package com.lemon.framework.processing.textprocessing.text;
 
-import com.lemon.framework.textprocessing.Processor;
+import com.lemon.framework.processing.textprocessing.Processor;
 
 import java.util.ArrayList;
 import java.util.List;
