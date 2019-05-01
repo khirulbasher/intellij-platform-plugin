@@ -42,7 +42,7 @@
                     <keyboard-shortcut first-keystroke="ctrl alt w" keymap="Lemon-Keymap" second-keystroke="c" remove="true"/>
                 </action>
 
-                <action class="com.lemon.idea.plugin.textprocessing.process.paragraph.ToSortParagraphProcessor" id="com.lemon.idea.plugin.textprocessing.process.paragraph.ToSortParagraphProcessor" text="Sorting The Paragraph" description="Sorting The Paragraph">
+                <!--<action class="com.lemon.idea.plugin.textprocessing.process.paragraph.ToSortParagraphProcessor" id="com.lemon.idea.plugin.textprocessing.process.paragraph.ToSortParagraphProcessor" text="Sorting The Paragraph" description="Sorting The Paragraph">
                     <keyboard-shortcut first-keystroke="ctrl alt w" keymap="Lemon-Keymap" second-keystroke="c" remove="true"/>
                 </action>
 
@@ -52,7 +52,7 @@
 
                 <action class="com.lemon.idea.plugin.textprocessing.process.paragraph.VerticalSortProcessor" id="com.lemon.idea.plugin.textprocessing.process.paragraph.VerticalSortProcessor" text="Sorting The Paragraph Vertically" description="Sorting The Paragraph Vertically">
                     <keyboard-shortcut first-keystroke="ctrl alt w" keymap="Lemon-Keymap" second-keystroke="c" remove="true"/>
-                </action>
+                </action>-->
 
                 <action class="com.lemon.idea.plugin.textprocessing.process.paragraph.TrimParagraphProcessor" id="com.lemon.idea.plugin.textprocessing.process.paragraph.TrimParagraphProcessor" text="Trim The Paragraph" description="Trim The Paragraph">
                     <keyboard-shortcut first-keystroke="ctrl alt w" keymap="Lemon-Keymap" second-keystroke="c" remove="true"/>
