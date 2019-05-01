@@ -1,10 +1,10 @@
-package com.lemon.idea.plugin.text.impl;
+package com.lemon.idea.plugin.text.process;
 
 import com.lemon.framework.processing.textprocessing.text.textcase.ToFlatSnakeCaseProcessor;
 import com.lemon.idea.plugin.text.TextAction;
 
-public class ToUpperFlatSnakeCase extends TextAction {
-    public ToUpperFlatSnakeCase() {
+public class ToUpperFlatSnakeCaseProcessor extends TextAction {
+    public ToUpperFlatSnakeCaseProcessor() {
         super(new ToFlatSnakeCaseProcessor());
     }
 }

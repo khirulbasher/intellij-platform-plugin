@@ -33,7 +33,7 @@ public abstract class AbstractAction extends AnAction {
     protected abstract void process(Caret caret);
 
     /**
-     * Process The Text using processor or any other way
+     * Process The Text using process or any other way
      * @param selectedText text to process
      * @return processed text
      */

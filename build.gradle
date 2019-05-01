@@ -28,6 +28,6 @@ patchPluginXml {
     untilBuild '192'
 
     changeNotes """
-      A Text Processing Plugin.<br>
+      A Text Processing Plugin and Text insertion.<br>
       <em>First Release</em>"""
 }

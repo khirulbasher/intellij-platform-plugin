@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>com.lemon.idea.plugin</id>
-    <name>A Plugin For Text Processing.</name>
+    <name>For Text Processing and Text insertion</name>
     <version>1.0</version>
     <vendor email="lemon.bashar@gmail.com" >Lemon</vendor>
 
@@ -11,7 +11,7 @@
     </change-notes>
 
     <description><![CDATA[
-        Not Described Yet
+        A Plugin For Text Processing and Text insertion.
     ]]></description>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
@@ -33,15 +33,15 @@
 
             <group id="Plugin.Text.Case" text="Text Case Processing" description="Text Case Related Actions" popup="true">
                 <!--Text Case Switch-->
-                <action id="com.lemon.idea.plugin.text.impl.CaseSwitchProcessor" class="com.lemon.idea.plugin.text.impl.CaseSwitchProcessor" text="To Upper/Lower Case"
+                <action id="com.lemon.idea.plugin.text.process.CaseSwitchProcessor" class="com.lemon.idea.plugin.text.process.CaseSwitchProcessor" text="To Upper/Lower Case"
                         description="To Upper/Lower Case Convert">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
                 </action>
-                <action id="com.lemon.idea.plugin.text.impl.ToUpperCase" class="com.lemon.idea.plugin.text.impl.ToUpperCase" text="To Upper Case"
+                <action id="com.lemon.idea.plugin.text.process.ToUpperCaseProcessor" class="com.lemon.idea.plugin.text.process.ToUpperCaseProcessor" text="To Upper Case"
                         description="To Upper Case Convert">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
                 </action>
-                <action id="com.lemon.idea.plugin.text.impl.ToLowerCase" class="com.lemon.idea.plugin.text.impl.ToLowerCase" text="To Lower Case"
+                <action id="com.lemon.idea.plugin.text.process.ToLowerCaseProcessor" class="com.lemon.idea.plugin.text.process.ToLowerCaseProcessor" text="To Lower Case"
                         description="To Lower Case">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
                 </action>
@@ -49,39 +49,39 @@
 
                 <!--Text Type Switch-->
 
-                <action id="com.lemon.idea.plugin.text.impl.CaseTypeSwitchCase" class="com.lemon.idea.plugin.text.impl.CaseTypeSwitchCase" text="To Snake/Camel Case"
+                <action id="com.lemon.idea.plugin.text.process.CaseTypeSwitchProcessor" class="com.lemon.idea.plugin.text.process.CaseTypeSwitchProcessor" text="To Snake/Camel Case"
                         description="To Snake/Camel Case">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
                 </action>
-                <action id="com.lemon.idea.plugin.text.impl.ToUpperCamelCase" class="com.lemon.idea.plugin.text.impl.ToUpperCamelCase" text="To Upper Camel Case"
+                <action id="com.lemon.idea.plugin.text.process.ToUpperCamelCaseProcessor" class="com.lemon.idea.plugin.text.process.ToUpperCamelCaseProcessor" text="To Upper Camel Case"
                         description="To Upper Camel Case">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
                 </action>
-                <action id="com.lemon.idea.plugin.text.impl.ToLowerCamelCase" class="com.lemon.idea.plugin.text.impl.ToLowerCamelCase" text="To Lower Camel Case"
+                <action id="com.lemon.idea.plugin.text.process.ToLowerCamelCaseProcessor" class="com.lemon.idea.plugin.text.process.ToLowerCamelCaseProcessor" text="To Lower Camel Case"
                         description="To Lower Camel Case">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
                 </action>
 
 
-                <action id="com.lemon.idea.plugin.text.impl.ToUpperSnakeCase" class="com.lemon.idea.plugin.text.impl.ToUpperSnakeCase" text="To Upper Snake Case"
+                <action id="com.lemon.idea.plugin.text.process.ToUpperSnakeCaseProcessor" class="com.lemon.idea.plugin.text.process.ToUpperSnakeCaseProcessor" text="To Upper Snake Case"
                         description="To Upper Snake Case Convert">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
                 </action>
-                <action id="com.lemon.idea.plugin.text.impl.ToLowerSnakeCase" class="com.lemon.idea.plugin.text.impl.ToLowerSnakeCase" text="To Lower Snake Case"
+                <action id="com.lemon.idea.plugin.text.process.ToLowerSnakeCaseProcessor" class="com.lemon.idea.plugin.text.process.ToLowerSnakeCaseProcessor" text="To Lower Snake Case"
                         description="To Lower Snake Case">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
                 </action>
 
-                <action id="com.lemon.idea.plugin.text.impl.ToUpperFlatSnakeCase" class="com.lemon.idea.plugin.text.impl.ToUpperFlatSnakeCase" text="To Upper Flat Snake Case"
+                <action id="com.lemon.idea.plugin.text.process.ToUpperFlatSnakeCaseProcessor" class="com.lemon.idea.plugin.text.process.ToUpperFlatSnakeCaseProcessor" text="To Upper Flat Snake Case"
                         description="To Upper Flat Snake Case Convert">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
                 </action>
-                <action id="com.lemon.idea.plugin.text.impl.ToLowerFlatSnakeCase" class="com.lemon.idea.plugin.text.impl.ToLowerFlatSnakeCase" text="To Lower Flat Snake Case"
+                <action id="com.lemon.idea.plugin.text.process.ToLowerFlatSnakeCaseProcessor" class="com.lemon.idea.plugin.text.process.ToLowerFlatSnakeCaseProcessor" text="To Lower Flat Snake Case"
                         description="To Lower Flat Snake Case">
                     <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
                 </action>
 
-                <action class="com.lemon.idea.plugin.text.impl.ToWordMaking" id="com.lemon.idea.plugin.text.impl.ToWordMaking" text="Convert To Words" description="Convert To Words">
+                <action class="com.lemon.idea.plugin.text.process.ToWordMakingProcessor" id="com.lemon.idea.plugin.text.process.ToWordMakingProcessor" text="Convert To Words" description="Convert To Words">
                     <keyboard-shortcut first-keystroke="ctrl alt w" keymap="$default" second-keystroke="c" remove="true"/>
                 </action>
                 <!--Text Type Switch-->

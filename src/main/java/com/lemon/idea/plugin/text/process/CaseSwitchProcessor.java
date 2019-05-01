@@ -1,4 +1,4 @@
-package com.lemon.idea.plugin.text.impl;
+package com.lemon.idea.plugin.text.process;
 
 import com.lemon.idea.plugin.text.TextAction;
 

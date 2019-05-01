@@ -1,4 +1,4 @@
-package com.lemon.idea.plugin.text.impl;
+package com.lemon.idea.plugin.text.process;
 
 import com.lemon.framework.base.processor.Processor;
 import com.lemon.framework.processing.textprocessing.text.textcase.ToLowerCamelCaseProcessor;
@@ -8,12 +8,12 @@ import com.lemon.framework.processing.textprocessing.text.textcase.ToUpperSnakeC
 import com.lemon.framework.processing.textprocessing.util.TextUtil;
 import com.lemon.idea.plugin.text.TextAction;
 
-public class CaseTypeSwitchCase extends TextAction {
+public class CaseTypeSwitchProcessor extends TextAction {
     private Processor<String,String> toUpperCamelCase;
     private Processor<String,String> toLowerCamelCase;
     private Processor<String,String> toUpperSnakeCase;
     private Processor<String,String> toLowerSnakeCase;
-    public CaseTypeSwitchCase() {
+    public CaseTypeSwitchProcessor() {
         super();
         toUpperCamelCase=new ToUpperCamelCaseProcessor();
         toLowerCamelCase=new ToLowerCamelCaseProcessor();

@@ -1,10 +1,11 @@
 package com.lemon.framework.processing.textprocessing.text.impl;
 
 import com.lemon.framework.processing.textprocessing.text.TextProcessorTest;
+import com.lemon.framework.processing.textprocessing.text.textcase.ToLowerCamelCaseProcessor;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ToLowerCamelCaseProcessorTest {
+public class ToLowerCamelCaseProcessorProcessorTest {
     private TextProcessorTest textProcessorTest;
 
     @Before
