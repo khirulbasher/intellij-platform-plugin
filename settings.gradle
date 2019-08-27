@@ -1,3 +1,4 @@
 rootProject.name = 'IdeaPlarformPlugin'
 
 include ':text-processing'
+include ':developer-security'
