@@ -14,19 +14,12 @@
         A Plugin For Text Processing and Text insertion.
     ]]></description>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
-    <!-- uncomment to enable plugin in all products
-    <depends>com.intellij.modules.lang</depends>
-    -->
-
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
     </extensions>
 
     <actions>
         <!-- Add your actions here -->
-
 
         <group id="Plugin.Text" text="Text" description="A Plugin For Text Processing.">
             <add-to-group group-id="MainMenu" anchor="last"/>
@@ -41,19 +34,6 @@
                 <action class="com.lemon.idea.plugin.textprocessing.process.paragraph.ToWordMakingProcessor" id="com.lemon.idea.plugin.textprocessing.process.paragraph.ToWordMakingProcessor" text="Convert To Words" description="Convert To Words">
                     <keyboard-shortcut first-keystroke="ctrl alt w" keymap="Lemon-Keymap" second-keystroke="c" remove="true"/>
                 </action>
-
-                <!--<action class="com.lemon.idea.plugin.textprocessing.process.paragraph.ToSortParagraphProcessor" id="com.lemon.idea.plugin.textprocessing.process.paragraph.ToSortParagraphProcessor" text="Sorting The Paragraph" description="Sorting The Paragraph">
-                    <keyboard-shortcut first-keystroke="ctrl alt w" keymap="Lemon-Keymap" second-keystroke="c" remove="true"/>
-                </action>
-
-                <action class="com.lemon.idea.plugin.textprocessing.process.paragraph.HorizontalSortProcessor" id="com.lemon.idea.plugin.textprocessing.process.paragraph.HorizontalSortProcessor" text="Sorting The Paragraph Horizontally" description="Sorting The Paragraph Horizontally">
-                    <keyboard-shortcut first-keystroke="ctrl alt w" keymap="Lemon-Keymap" second-keystroke="c" remove="true"/>
-                </action>
-
-                <action class="com.lemon.idea.plugin.textprocessing.process.paragraph.VerticalSortProcessor" id="com.lemon.idea.plugin.textprocessing.process.paragraph.VerticalSortProcessor" text="Sorting The Paragraph Vertically" description="Sorting The Paragraph Vertically">
-                    <keyboard-shortcut first-keystroke="ctrl alt w" keymap="Lemon-Keymap" second-keystroke="c" remove="true"/>
-                </action>-->
-
                 <action class="com.lemon.idea.plugin.textprocessing.process.paragraph.TrimParagraphProcessor" id="com.lemon.idea.plugin.textprocessing.process.paragraph.TrimParagraphProcessor" text="Trim The Paragraph" description="Trim The Paragraph">
                     <keyboard-shortcut first-keystroke="ctrl alt w" keymap="Lemon-Keymap" second-keystroke="c" remove="true"/>
                 </action>
@@ -89,7 +69,6 @@
                         description="To Lower Camel Case">
                     <keyboard-shortcut keymap="Lemon-Keymap" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
                 </action>
-
 
                 <action id="com.lemon.idea.plugin.textprocessing.process.textcase.ToUpperSnakeCaseProcessor" class="com.lemon.idea.plugin.textprocessing.process.textcase.ToUpperSnakeCaseProcessor" text="To Upper Snake Case"
                         description="To Upper Snake Case Convert">

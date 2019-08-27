@@ -26,6 +26,10 @@ public abstract class AbstractAction extends AnAction {
         process(caretModel.getAllCarets());
     }
 
+    /**
+     * Process Multiple Caret
+     * @param carets multiple caret
+     */
     public abstract void process(List<Caret> carets);
 
     /**
