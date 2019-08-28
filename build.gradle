@@ -19,7 +19,7 @@ subprojects {
     apply plugin: 'org.jetbrains.intellij'
 
     group 'com.lemon.idea.plugin'
-    version '1.0-SNAPSHOT'
+    version '1.0.5'
 
     sourceCompatibility = 1.8
 
@@ -40,6 +40,6 @@ subprojects {
 
     patchPluginXml {
         sinceBuild '182'
-        untilBuild '198' 
+        untilBuild '198'
     }
 }

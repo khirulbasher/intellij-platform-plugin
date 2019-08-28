@@ -1,0 +1,25 @@
+<idea-plugin>
+    <id>com.lemon.idea.plugin.startup</id>
+    <name>Startup</name>
+    <version>1.0.5</version>
+    <vendor email="lemon.bashar@gmail.com" >Lemon</vendor>
+
+    <change-notes><![CDATA[
+      Initially Released<br>
+      <em>A Plugin For Startup.</em>
+    ]]>
+    </change-notes>
+
+    <description><![CDATA[
+        A Plugin For Application Startup Management.
+    ]]></description>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+
+</idea-plugin>

@@ -1,0 +1,7 @@
+subprojects {
+    group 'com.lemon.idea.plugin.startup'
+}
+
+intellij {
+    plugins = [project(':startup')]
+}
