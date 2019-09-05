@@ -19,7 +19,7 @@ subprojects {
     apply plugin: 'org.jetbrains.intellij'
 
     group 'com.lemon.idea.plugin'
-    version '1.0.5'
+    version '1.0.8'
 
     sourceCompatibility = 1.8
 
