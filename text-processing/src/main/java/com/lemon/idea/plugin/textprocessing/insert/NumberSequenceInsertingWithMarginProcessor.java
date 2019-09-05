@@ -4,10 +4,11 @@ import com.intellij.openapi.editor.Caret;
 
 import java.util.List;
 
-public class NumberSequenceInsertingProcessor extends AbstractTextInsertingProcessor{
+public class NumberSequenceInsertingWithMarginProcessor extends AbstractTextInsertingProcessor{
 
     @Override
     protected String makeInsertText(int index, Caret currentCaret, List<Caret> carets) {
-        return ""+index;
+        return String.format("%0"+(""+carets.size()).length()+"d",index);
     }
+
 }

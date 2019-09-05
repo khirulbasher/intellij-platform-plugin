@@ -11,7 +11,7 @@ public abstract class AbstractTextInsertingProcessor extends AbstractAction {
     public void process(List<Caret> carets) {
         int index=0;
         for(Caret caret:carets) {
-            replace(makeInsertText(index,caret),caret.getSelectionStart(),caret.getSelectionEnd());
+            replace(makeInsertText(index,caret,carets),caret.getSelectionStart(),caret.getSelectionEnd());
             index++;
         }
     }
@@ -20,9 +20,10 @@ public abstract class AbstractTextInsertingProcessor extends AbstractAction {
      * Create a text for inserting
      * @param index The index of the caret
      * @param currentCaret The Current Caret information
+     * @param carets
      * @return Processed Text to insert
      */
-    protected abstract String makeInsertText(int index, Caret currentCaret);
+    protected abstract String makeInsertText(int index, Caret currentCaret, List<Caret> carets);
 
     @Override
     protected String process(String selectedText) {

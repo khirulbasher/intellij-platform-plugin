@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.lemon.idea.plugin.startup</id>
     <name>Startup</name>
-    <version>1.0.5</version>
+    <version>1.0.8</version>
     <vendor email="lemon.bashar@gmail.com" >Lemon</vendor>
 
     <change-notes><![CDATA[

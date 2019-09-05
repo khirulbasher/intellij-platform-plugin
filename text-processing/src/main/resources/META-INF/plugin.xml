@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.lemon.idea.plugin</id>
     <name>For Text Processing and Text insertion</name>
-    <version>1.0</version>
+    <version>1.0.8</version>
     <vendor email="lemon.bashar@gmail.com" >Lemon</vendor>
 
     <change-notes><![CDATA[
@@ -26,6 +26,10 @@
 
             <group id="Plugin.Text.Insert" description="Text Insert" text="Text Insert" popup="true">
                 <action class="com.lemon.idea.plugin.textprocessing.insert.NumberSequenceInsertingProcessor" text="Numeric Text Insert" description="Numeric Text Insert" id="com.lemon.idea.plugin.textprocessing.insert.NumberSequenceInsertingProcessor">
+                    <keyboard-shortcut keymap="Lemon-Keymap" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
+                </action>
+
+                <action class="com.lemon.idea.plugin.textprocessing.insert.NumberSequenceInsertingWithMarginProcessor" text="Numeric Text Insert With Margin" description="Numeric Text Insert With Margin" id="com.lemon.idea.plugin.textprocessing.insert.NumberSequenceInsertingWithMarginProcessor">
                     <keyboard-shortcut keymap="Lemon-Keymap" first-keystroke="ctrl alt C" second-keystroke="C" remove="true"/>
                 </action>
             </group>
