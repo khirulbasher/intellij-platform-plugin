@@ -56,14 +56,14 @@ public class SortParagraphProcessor extends AbstractParagraphProcessor {
         for (String line : lines) {
             StringBuilder builder = new StringBuilder();
             String[] words = line.split(wordSeparatingRegex);
-            if(sortType.equals(SortType.BOTH) || sortType.equals(SortType.HORIZONTAL)) sortArray(words, sortOrder);
+            if (sortType.equals(SortType.BOTH) || sortType.equals(SortType.HORIZONTAL)) sortArray(words, sortOrder);
             for (String word : words)
                 builder.append(word).append(wordSeparatingRegex);
             builder.append(lineSeparatingRegex);
             sortedLines.add(builder.toString());
         }
 
-        if(sortType.equals(SortType.BOTH) || sortType.equals(SortType.VERTICAL)) sortList(sortedLines, sortOrder);
+        if (sortType.equals(SortType.BOTH) || sortType.equals(SortType.VERTICAL)) sortList(sortedLines, sortOrder);
         StringBuilder builder = new StringBuilder();
         sortedLines.forEach(line -> builder.append(line));
         return builder.toString();
@@ -105,5 +105,35 @@ public class SortParagraphProcessor extends AbstractParagraphProcessor {
     public enum SortOrder {
         NONE, ASC, DESC
     }
+
+    public Comparator<String> comparator = (first, second) -> {
+        int lenF = first.length();
+        int lenS = second.length();
+        int minLen = Math.min(lenF, lenS);
+
+        for (int i = 0; i < minLen; i++) {
+            char chF = first.charAt(i);
+            char chS = second.charAt(i);
+            if (chF == chS)
+                continue;
+            return Character.compare(chF, chS);
+        }
+        return Integer.compare(lenF, lenS);
+    };
+
+    public Comparator<String> comparatorDes = (first, second) -> {
+        int lenF = first.length();
+        int lenS = second.length();
+        int minLen = Math.min(lenF, lenS);
+
+        for (int i = 0; i < minLen; i++) {
+            char chF = first.charAt(i);
+            char chS = second.charAt(i);
+            if (chF == chS)
+                continue;
+            return Character.compare(chS, chF);
+        }
+        return Integer.compare(lenS, lenF);
+    };
 
 }

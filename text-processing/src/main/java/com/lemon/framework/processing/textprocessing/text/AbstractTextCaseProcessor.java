@@ -18,6 +18,14 @@ public abstract class AbstractTextCaseProcessor extends AbstractTextProcessor {
         addAcceptedCharRange('A', 'Z');
     }
 
+    /**
+     * Decide that the character we should collect or not from text line, and it's judge by provided accepted character
+     * range
+     *
+     * @param ch The Provided Character
+     * @return True if the character is omitted or not existed on acceptedCharRange
+     * TODO: Rise up performance with change it to binary search procedure
+     */
     protected boolean isOmittedChar(char ch) {
         for (Range range : acceptedCharRange)
             if (ch >= range.from && ch <= range.to) return false;
